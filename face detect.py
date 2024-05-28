@@ -1,6 +1,6 @@
 import cv2
 
-face_cap =cv2.CascadeClassifier("sample.xml")
+face_cap =cv2.CascadeClassifier("sample.xml")<----#ADD THE HAARASCODE FILE HERE FRONTALFASE SHEET..
 video_cap = cv2.VideoCapture(0)
 while True:
    
