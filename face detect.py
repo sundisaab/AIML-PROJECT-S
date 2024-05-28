@@ -1,6 +1,6 @@
 import cv2
 
-face_cap =cv2.CascadeClassifier("sample.xml")#<-----ADD THE HAARASCODE FILE HERE FRONTALFASE SHEET..
+face_cap =cv2.CascadeClassifier("sample.xml")
 video_cap = cv2.VideoCapture(0)
 while True:
    
@@ -12,11 +12,12 @@ while True:
        minNeighbors=5,
        minSize=(30,30),
        flags=cv2.CASCADE_SCALE_IMAGE
+    )
+   for (x,y,w,h) in faces:
 
-   )
+      cv2.rectangle(video_data, (x,y), (x+w,y+h), (0,0,255),2)
 
-   
-   cv2.imshow("video_live", video_data)
+   cv2.imshow("harry_live", video_data)
    if cv2.waitKey(10) == ord("a"):
        break
 
